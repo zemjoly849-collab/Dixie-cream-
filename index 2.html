@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dixie Cream Donuts PSL</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff3f7;
+}
+.nav {
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#ff6fae;
+  color:white;
+}
+.nav a {color:white; margin:0 10px; text-decoration:none;}
+.hero {
+  text-align:center;
+  padding:80px 20px;
+  background:linear-gradient(#ffb6d5,#fff3f7);
+}
+.hero h1 {font-size:42px;}
+.hero button {
+  margin:10px;
+  padding:12px 20px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+}
+.primary {background:#ff4d94;color:white;}
+.section {padding:40px;text-align:center;}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+}
+.card {
+  background:white;
+  padding:15px;
+  border-radius:15px;
+}
+.form {
+  display:flex;
+  flex-direction:column;
+  max-width:300px;
+  margin:auto;
+  gap:10px;
+}
+input {
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+button {
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+}
+footer {
+  text-align:center;
+  padding:20px;
+  background:#ff6fae;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <h2>Dixie Cream PSL</h2>
+  <div>
+    <a href="#menu">Menu</a>
+    <a href="#order">Order</a>
+    <a href="#locations">Locations</a>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Fresh Donuts Daily 🍩</h1>
+  <p>Port St. Lucie’s favorite donut shop</p>
+  <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">View Menu</button>
+  <button class="primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Ahead</button>
+</div>
+
+<div class="section" id="menu">
+  <h2>Menu</h2>
+  <div class="grid">
+    <div class="card">🍓 Strawberry Glaze<br>$1.75</div>
+    <div class="card">🍫 Chocolate Frosted<br>$1.75</div>
+    <div class="card">🥓 Maple Bacon<br>$2.25</div>
+    <div class="card">🍩 Boston Cream<br>$2.00</div>
+    <div class="card">🍇 Jelly Filled<br>$1.75</div>
+    <div class="card">🌈 Sprinkles<br>$1.50</div>
+  </div>
+</div>
+
+<div class="section" id="order">
+<h2>Order Ahead</h2>
+<form class="form" onsubmit="event.preventDefault(); alert('Order placed!');">
+<input placeholder="Name" required />
+<input placeholder="Item" required />
+<input placeholder="Quantity" required />
+<button class="primary" type="submit">Place Order</button>
+</form>
+</div>
+
+<div class="section" id="locations">
+<h2>Locations</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Port St. Lucie</h3>
+<p>1364 SW Bayshore Boulevard</p>
+<p><b>772-237-2107</b></p>
+<a href="tel:7722372107"><button class="primary">Call</button></a>
+</div>
+
+<div class="card">
+<h3>Fort Pierce</h3>
+<p>3210 Orange Ave</p>
+<p><b>772-467-1002</b></p>
+<a href="tel:7724671002"><button class="primary">Call</button></a>
+</div>
+</div>
+
+</div>
+
+<footer>© 2026 Dixie Cream Donuts</footer>
+
+</body>
+</html>
